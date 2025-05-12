@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Virtual Betting App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="login-screen">
+      <h2>Enter Your Name</h2>
+      <input type="text" id="username" placeholder="Your name" />
+      <button onclick="login()">Enter</button>
+    </div>
+
+    <div id="main-screen" style="display:none;">
+      <h1>Welcome, <span id="displayName"></span>!</h1>
+      <p>Balance: <span id="balance">1000</span> coins</p>
+      <p>Place your bet before timer runs out!</p>
+      <div id="timer">Time Left: <span id="time">30</span>s</div>
+
+      <div class="bet-box">
+        <div class="team">
+          <h2>Team A</h2>
+          <input type="number" id="betA" placeholder="Amount" />
+          <button onclick="placeBet('A')">Bet on A</button>
+        </div>
+        <div class="team">
+          <h2>Team B</h2>
+          <input type="number" id="betB" placeholder="Amount" />
+          <button onclick="placeBet('B')">Bet on B</button>
+        </div>
+      </div>
+
+      <div id="resultMsg"></div>
+
+      <h3>Betting History</h3>
+      <ul id="history"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
